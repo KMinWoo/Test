@@ -9,6 +9,7 @@ public class LinkDB {
 	public Connection conn;
 	public PreparedStatement pstmt;
 	public ResultSet rs;
+
 	private DBInfo user;
 
 	public LinkDB() {
@@ -18,7 +19,6 @@ public class LinkDB {
 	public void connectDB() {
 		try {
 			// Class.forName(jdbcDriver);
-
 			conn = DriverManager.getConnection(user.getJdbcUrl(), user.getID(), user.getID());
 			System.out.print("연결성공");
 
